@@ -22,7 +22,7 @@
     ],
     "rules": {
         "no-unused-expressions": "error",
-        "no-unused-vars": "error",
+        "react-native/no-unused-vars": "error",
         "no-undef": "error",
         "react-native/no-unused-styles": 2,
         "react-native/split-platform-components": 2,

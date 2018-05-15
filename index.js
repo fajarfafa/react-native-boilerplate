@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppRegistry } from 'react-native'
+import Navigator from './navigator'
 
-AppRegistry.registerComponent('myBoilerplate', () => App);
+AppRegistry.registerComponent('myBoilerplate', () => Navigator)
