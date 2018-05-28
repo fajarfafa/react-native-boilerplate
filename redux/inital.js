@@ -14,12 +14,10 @@ const INITIAL_STATE = {
 }
 
 const countIncrement = (state, action) => {
-  console.debug(state)
   return { ...state, count: state.count + 1 }
 }
 
 const countDecrement = (state, action) => {
-  console.debug(state)
   return { ...state, count: state.count - 1 }
 }
 
