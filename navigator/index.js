@@ -5,10 +5,10 @@ import { Provider } from 'react-redux'
 import FCM, { FCMEvent } from 'react-native-fcm'
 import rootRedux from '../redux'
 import App from '../App'
-import RctWeb from '../component/RCTWeb'
 const RootNav = StackNavigator({
-  RctWeb: RctWeb,
   App: App
+}, {
+  initialRouteKey: 'App'
 })
 
 const containerRoot = { flex: 1 }
