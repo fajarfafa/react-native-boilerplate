@@ -11,14 +11,16 @@ import { connect } from 'react-redux'
 import API from './services/api'
 class App extends React.Component {
   componentDidMount() {
-    this.props.countDecrement()
+    this.props.initialGet()
   }
   render() {
     return (
       <Container>
-        <Text>
-          {JSON.stringify(this.props.initial, null, 2)}
-        </Text>
+        <Content>
+          <Text>
+            {JSON.stringify(this.props.initial, null, 2)}
+          </Text>
+        </Content>
       </Container>
     )
   }

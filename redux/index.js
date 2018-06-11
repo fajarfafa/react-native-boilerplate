@@ -7,15 +7,11 @@ export default () => {
     initial
   })
   const sagaMiddleware = createSagaMiddleware()
-  // mount it on the Store
   const store = createStore(
     rootReducer,
     applyMiddleware(sagaMiddleware)
   )
 
-  // then run the saga
   sagaMiddleware.run(rootSaga)
-  // return rootReducer
   return store
-  // return createStore(rootReducer)
 }

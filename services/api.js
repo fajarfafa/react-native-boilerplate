@@ -1,18 +1,13 @@
-import Axios from 'axios'
+import apisauce from 'apisauce'
 
-export default class API {
+export function api(config) {
+  const api = apisauce.create({
+    baseURL: 'https://reqres.in/',
+    ...config
+  })
 
-  constructor(header) {
-    this.api = Axios.create({
-      baseURL: 'https://reqres.in/',
-      timeout: 60 * 1000,
-      headers: header
-    })
+  return {
+    listUser: (params) => { return api.get('/api/users', params) }
   }
 
-  get(url, config, success, error) {
-    this.api.get(url, config)
-      .then(resp => { return success(resp) })
-      .catch(err => { console.error(err); return error(err) })
-  }
 }

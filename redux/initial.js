@@ -5,6 +5,7 @@ const { Types, Creators } = createActions({
   countIncrement: null,
   countDecrement: null,
   initialGet: ['config'],
+  initialGetSuccess: ['data']
 })
 
 export const InitialTypes = Types
@@ -16,24 +17,29 @@ const INITIAL_STATE = {
   data: {}
 }
 
-const countIncrement = (state, action) => {
+const countIncrement = (state) => {
   return { ...state, count: state.count + 1 }
 }
 
-const countDecrement = (state, action) => {
+const countDecrement = (state) => {
   return { ...state, count: state.count - 1 }
 }
 
 const initialGet = (state, action) => {
   const { config } = action
-  const  api = new API(config)
   return state
+}
+
+const initialGetSuccess = (state, action) => {
+  const { data } = action
+  return { ...state, data: data.data }
 }
 
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.COUNT_INCREMENT]: countIncrement,
   [Types.COUNT_DECREMENT]: countDecrement,
   [Types.INITIAL_GET]: initialGet,
+  [Types.INITIAL_GET_SUCCESS]: initialGetSuccess,
 })
 
 

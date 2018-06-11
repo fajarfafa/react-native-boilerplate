@@ -3,7 +3,7 @@ import { InitialTypes } from '../redux/initial'
 import { initialWorker } from './initial'
 export default function* root() {
   try {
-    yield takeLatest(InitialTypes.COUNT_DECREMENT, initialWorker)
+    yield takeLatest(InitialTypes.INITIAL_GET, initialWorker)
   } catch (e) {
     console.error(e)
   }
