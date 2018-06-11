@@ -51,6 +51,7 @@
 		7FBC4BB0FD6C405EB2BC70FB /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFD6D0FA801B4A209F4573E3 /* Zocial.ttf */; };
 		4CFFFECC975D4512BD0AAB94 /* libRNFIRMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D23F8D5EED904D87B96737F7 /* libRNFIRMessaging.a */; };
 		A89DF6A0DCD14359B5F2E634 /* libRNFileSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 013D8DCEFFF446D8A0C38513 /* libRNFileSystem.a */; };
+		CA19A4C6E1534163A4F1E1D1 /* libRNMusicMetadata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95280127374A4D148590D972 /* libRNMusicMetadata.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -372,6 +373,8 @@
 		D23F8D5EED904D87B96737F7 /* libRNFIRMessaging.a */ = {isa = PBXFileReference; name = "libRNFIRMessaging.a"; path = "libRNFIRMessaging.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		34FDA665D13B49C2B7864D15 /* RNFileSystem.xcodeproj */ = {isa = PBXFileReference; name = "RNFileSystem.xcodeproj"; path = "../node_modules/react-native-filesystem/ios/RNFileSystem.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		013D8DCEFFF446D8A0C38513 /* libRNFileSystem.a */ = {isa = PBXFileReference; name = "libRNFileSystem.a"; path = "libRNFileSystem.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3C8BAF5638B2497989084DE8 /* RNMusicMetadata.xcodeproj */ = {isa = PBXFileReference; name = "RNMusicMetadata.xcodeproj"; path = "../node_modules/react-native-music-metadata/RNMusicMetadata.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		95280127374A4D148590D972 /* libRNMusicMetadata.a */ = {isa = PBXFileReference; name = "libRNMusicMetadata.a"; path = "libRNMusicMetadata.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +405,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				4CFFFECC975D4512BD0AAB94 /* libRNFIRMessaging.a in Frameworks */,
 				A89DF6A0DCD14359B5F2E634 /* libRNFileSystem.a in Frameworks */,
+				CA19A4C6E1534163A4F1E1D1 /* libRNMusicMetadata.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +594,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				95E4A6ADECAC4BAC91386F7C /* RNFIRMessaging.xcodeproj */,
 				34FDA665D13B49C2B7864D15 /* RNFileSystem.xcodeproj */,
+				3C8BAF5638B2497989084DE8 /* RNMusicMetadata.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1251,11 +1256,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Debug;
@@ -1278,11 +1285,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Release;
@@ -1306,6 +1315,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Debug;
@@ -1328,6 +1338,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Release;
@@ -1359,11 +1370,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Debug;
@@ -1395,11 +1408,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Release;
@@ -1430,11 +1445,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Debug;
@@ -1465,11 +1482,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fcm/ios",
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
+					"$(SRCROOT)/../node_modules/react-native-music-metadata/RNMusicMetadata",
 				);
 			};
 			name = Release;

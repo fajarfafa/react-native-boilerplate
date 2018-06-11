@@ -6,19 +6,19 @@
 import React, { Component } from 'react'
 import { Platform, StyleSheetTouchableOpacity } from 'react-native'
 import { Content, Container, Button, Text, View } from 'native-base'
-import InitialActions from './redux/inital'
+import InitialActions from './redux/initial'
 import { connect } from 'react-redux'
+import API from './services/api'
 class App extends React.Component {
+  componentDidMount() {
+    this.props.countDecrement()
+  }
   render() {
     return (
       <Container>
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Count : {this.props.initial.count}</Text>
-          <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
-            <Button onPress={this.props.countDecrement} style={{ margin: 2 }}><Text>-</Text></Button>
-            <Button onPress={this.props.countIncrement} style={{ margin: 2 }}><Text>+</Text></Button>
-          </View>
-        </View>
+        <Text>
+          {JSON.stringify(this.props.initial, null, 2)}
+        </Text>
       </Container>
     )
   }
@@ -33,7 +33,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     countDecrement: () => { dispatch(InitialActions.countDecrement()) },
-    countIncrement: () => { dispatch(InitialActions.countIncrement()) }
+    countIncrement: () => { dispatch(InitialActions.countIncrement()) },
+    initialGet: (config) => { dispatch(InitialActions.initialGet(config)) }
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App)
